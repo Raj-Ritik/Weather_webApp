@@ -1,27 +1,31 @@
 *{
     margin: 0;
     padding: 0;
-    /* box-sizing: content-box; */
 }
 body{
-    background-color: #222;
+    background-image: url(./body-background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
 }
 
 .card{
-    /* border: solid black; */
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
+    background-image: url(./weather-box-img.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    margin: 100px auto 0;
+    margin: auto;
+    margin-top: 30px;
     padding :40px 35px;
     border-radius: 20px;
 }
 
 .search{
     width: 100%;
-    /* border: solid black; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,9 +51,6 @@ body{
     width: 16px;
 }
 
-.weather{
-    /* border: solid black; */
-}
 .weather-icon{
     width: 170px;
     margin-top: 30px;
@@ -67,7 +68,6 @@ body{
 }
 
 .details{
-    /* border: solid black; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,7 +76,6 @@ body{
 }
 
 .col{
-    /* border: solid black; */
     display: flex;
     align-items: center;
     text-align: left;
@@ -90,5 +89,16 @@ body{
 .humidity,.wind{
     font-size: 25px;
     margin-top: -6px;
+}
+
+.weather{
+    display: none;
+}
+
+.error{
+    margin-top: 10px;
+    font-size: 30px;
+    color:white ;
+    display : none;
 }
 
