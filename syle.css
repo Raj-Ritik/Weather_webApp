@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-image: url(./body-background.jpg);
+    background-image: url(./images/body-background.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,7 +13,7 @@ body{
 .card{
     width: 90%;
     max-width: 470px;
-    background-image: url(./weather-box-img.png);
+    background-image: url(./images/weather-box-img.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

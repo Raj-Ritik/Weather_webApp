@@ -6,12 +6,13 @@ const searchBtn = document.querySelector(".search button");
 const icon = document.querySelector(".weather-icon");
 
 async function checkWeather(city) {
-    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-    if (response.status == 404) {
-        document.querySelector(".error").style.display = "block";
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`); // we are using async and await because we 
+    if (response.status == 404) {                  // we dont want to execute the code before getting data from api
+        document.querySelector(".error").style.display = "block";// await --> hm intezaar kr rhe hai ki jb daTA AAJAE API SE TB HM NICHE KE SARE CODE KO EXECUTE HONE DE
         document.querySelector(".weather").style.display = "none";
     }
     else {
+        document.querySelector(".error").style.display = "none";
         var data = await response.json();
         console.log(data);
         document.querySelector(".city").innerHTML = data.name;
@@ -44,5 +45,16 @@ async function checkWeather(city) {
 searchBtn.addEventListener("click", function () {
     console.log(searchBox.value);
     checkWeather(searchBox.value);
+    if (searchBox.value === '')
+        alert("Enter a city!!");
+})
+
+document.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        if (searchBox.value === '')
+            alert("Enter a city!!");
+        else
+            checkWeather(searchBox.value);
+    }
 })
 
